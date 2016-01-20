@@ -1,2 +1,2 @@
 # net-proposal-tester
-Testing tool for our stuff
+Small testing application for our proposal services.
