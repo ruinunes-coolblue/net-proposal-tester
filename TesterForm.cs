@@ -143,6 +143,9 @@ namespace PurchaseProposalTester
 
         private void txtContainerQuantity_Leave(object sender, EventArgs e)
         {
+            if(_containerQuantity < 1)
+                _containerQuantity = 1;
+
             txtContainerQuantity.Text = _containerQuantity.ToString();
         }
 
