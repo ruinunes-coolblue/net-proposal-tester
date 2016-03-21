@@ -53,59 +53,67 @@
             this.lblOkMsg = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.chkMandatoryContainerQuantity = new System.Windows.Forms.CheckBox();
+            this.txtProductGroup = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblProductTitle
             // 
             this.lblProductTitle.AutoSize = true;
             this.lblProductTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductTitle.Location = new System.Drawing.Point(36, 32);
+            this.lblProductTitle.Location = new System.Drawing.Point(14, 13);
+            this.lblProductTitle.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblProductTitle.Name = "lblProductTitle";
-            this.lblProductTitle.Size = new System.Drawing.Size(281, 32);
+            this.lblProductTitle.Size = new System.Drawing.Size(118, 13);
             this.lblProductTitle.TabIndex = 0;
             this.lblProductTitle.Text = "Product Information";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 104);
+            this.label1.Location = new System.Drawing.Point(16, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 32);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Product ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 163);
+            this.label2.Location = new System.Drawing.Point(17, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 32);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Available Stock";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 234);
+            this.label3.Location = new System.Drawing.Point(17, 126);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 32);
+            this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Purchase Order";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 310);
+            this.label4.Location = new System.Drawing.Point(17, 158);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 32);
+            this.label4.Size = new System.Drawing.Size(91, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Prepared to Order";
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(291, 97);
+            this.txtProductID.Location = new System.Drawing.Point(109, 41);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(188, 38);
+            this.txtProductID.Size = new System.Drawing.Size(73, 20);
             this.txtProductID.TabIndex = 5;
             this.txtProductID.Text = "0";
             this.txtProductID.TextChanged += new System.EventHandler(this.txtProductID_TextChanged);
@@ -113,9 +121,10 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(291, 163);
+            this.txtStock.Location = new System.Drawing.Point(110, 96);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(188, 38);
+            this.txtStock.Size = new System.Drawing.Size(73, 20);
             this.txtStock.TabIndex = 6;
             this.txtStock.Text = "0";
             this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
@@ -123,9 +132,10 @@
             // 
             // txtPurchaseOrder
             // 
-            this.txtPurchaseOrder.Location = new System.Drawing.Point(291, 234);
+            this.txtPurchaseOrder.Location = new System.Drawing.Point(110, 126);
+            this.txtPurchaseOrder.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtPurchaseOrder.Name = "txtPurchaseOrder";
-            this.txtPurchaseOrder.Size = new System.Drawing.Size(188, 38);
+            this.txtPurchaseOrder.Size = new System.Drawing.Size(73, 20);
             this.txtPurchaseOrder.TabIndex = 7;
             this.txtPurchaseOrder.Text = "0";
             this.txtPurchaseOrder.TextChanged += new System.EventHandler(this.txtPurchaseOrder_TextChanged);
@@ -133,9 +143,10 @@
             // 
             // txtPreparedToOrder
             // 
-            this.txtPreparedToOrder.Location = new System.Drawing.Point(291, 303);
+            this.txtPreparedToOrder.Location = new System.Drawing.Point(110, 155);
+            this.txtPreparedToOrder.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtPreparedToOrder.Name = "txtPreparedToOrder";
-            this.txtPreparedToOrder.Size = new System.Drawing.Size(188, 38);
+            this.txtPreparedToOrder.Size = new System.Drawing.Size(73, 20);
             this.txtPreparedToOrder.TabIndex = 8;
             this.txtPreparedToOrder.Text = "0";
             this.txtPreparedToOrder.TextChanged += new System.EventHandler(this.txtPreparedToOrder_TextChanged);
@@ -144,35 +155,39 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(590, 104);
+            this.label5.Location = new System.Drawing.Point(221, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(304, 32);
+            this.label5.Size = new System.Drawing.Size(115, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Active Mail Conversion";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(590, 241);
+            this.label6.Location = new System.Drawing.Point(221, 101);
+            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(253, 32);
+            this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Container Quantity";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(590, 172);
+            this.label7.Location = new System.Drawing.Point(221, 72);
+            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(304, 32);
+            this.label7.Size = new System.Drawing.Size(116, 13);
             this.label7.TabIndex = 11;
             this.label7.Text = "Weekly Sales Forecast";
             // 
             // txtActiveMailConversion
             // 
-            this.txtActiveMailConversion.Location = new System.Drawing.Point(948, 104);
+            this.txtActiveMailConversion.Location = new System.Drawing.Point(356, 44);
+            this.txtActiveMailConversion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtActiveMailConversion.Name = "txtActiveMailConversion";
-            this.txtActiveMailConversion.Size = new System.Drawing.Size(178, 38);
+            this.txtActiveMailConversion.Size = new System.Drawing.Size(69, 20);
             this.txtActiveMailConversion.TabIndex = 12;
             this.txtActiveMailConversion.Text = "0";
             this.txtActiveMailConversion.TextChanged += new System.EventHandler(this.txtActiveMailConversion_TextChanged);
@@ -180,9 +195,10 @@
             // 
             // txtContainerQuantity
             // 
-            this.txtContainerQuantity.Location = new System.Drawing.Point(948, 241);
+            this.txtContainerQuantity.Location = new System.Drawing.Point(356, 101);
+            this.txtContainerQuantity.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtContainerQuantity.Name = "txtContainerQuantity";
-            this.txtContainerQuantity.Size = new System.Drawing.Size(178, 38);
+            this.txtContainerQuantity.Size = new System.Drawing.Size(69, 20);
             this.txtContainerQuantity.TabIndex = 14;
             this.txtContainerQuantity.Text = "1";
             this.txtContainerQuantity.TextChanged += new System.EventHandler(this.txtContainerQuantity_TextChanged);
@@ -190,9 +206,10 @@
             // 
             // txtWeeklySalesForecast
             // 
-            this.txtWeeklySalesForecast.Location = new System.Drawing.Point(948, 172);
+            this.txtWeeklySalesForecast.Location = new System.Drawing.Point(356, 72);
+            this.txtWeeklySalesForecast.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtWeeklySalesForecast.Name = "txtWeeklySalesForecast";
-            this.txtWeeklySalesForecast.Size = new System.Drawing.Size(178, 38);
+            this.txtWeeklySalesForecast.Size = new System.Drawing.Size(69, 20);
             this.txtWeeklySalesForecast.TabIndex = 13;
             this.txtWeeklySalesForecast.Text = "0";
             this.txtWeeklySalesForecast.TextChanged += new System.EventHandler(this.txtWeeklySalesForecast_TextChanged);
@@ -200,9 +217,10 @@
             // 
             // btnCreateUpdateProduct
             // 
-            this.btnCreateUpdateProduct.Location = new System.Drawing.Point(341, 581);
+            this.btnCreateUpdateProduct.Location = new System.Drawing.Point(128, 244);
+            this.btnCreateUpdateProduct.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnCreateUpdateProduct.Name = "btnCreateUpdateProduct";
-            this.btnCreateUpdateProduct.Size = new System.Drawing.Size(554, 59);
+            this.btnCreateUpdateProduct.Size = new System.Drawing.Size(208, 25);
             this.btnCreateUpdateProduct.TabIndex = 15;
             this.btnCreateUpdateProduct.Text = "Create Proposal";
             this.btnCreateUpdateProduct.UseVisualStyleBackColor = true;
@@ -211,18 +229,20 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(48, 440);
+            this.label8.Location = new System.Drawing.Point(18, 185);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(212, 32);
+            this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Expected SOQ:";
             // 
             // lblExpectedSOQ
             // 
             this.lblExpectedSOQ.AutoSize = true;
-            this.lblExpectedSOQ.Location = new System.Drawing.Point(285, 440);
+            this.lblExpectedSOQ.Location = new System.Drawing.Point(107, 185);
+            this.lblExpectedSOQ.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblExpectedSOQ.Name = "lblExpectedSOQ";
-            this.lblExpectedSOQ.Size = new System.Drawing.Size(31, 32);
+            this.lblExpectedSOQ.Size = new System.Drawing.Size(13, 13);
             this.lblExpectedSOQ.TabIndex = 17;
             this.lblExpectedSOQ.Text = "0";
             // 
@@ -230,9 +250,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(46, 488);
+            this.label9.Location = new System.Drawing.Point(17, 205);
+            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(214, 29);
+            this.label9.Size = new System.Drawing.Size(95, 13);
             this.label9.TabIndex = 18;
             this.label9.Text = "Un-rounded Value:";
             // 
@@ -240,9 +261,10 @@
             // 
             this.lblExpectedOriginalSOQ.AutoSize = true;
             this.lblExpectedOriginalSOQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpectedOriginalSOQ.Location = new System.Drawing.Point(291, 488);
+            this.lblExpectedOriginalSOQ.Location = new System.Drawing.Point(109, 205);
+            this.lblExpectedOriginalSOQ.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblExpectedOriginalSOQ.Name = "lblExpectedOriginalSOQ";
-            this.lblExpectedOriginalSOQ.Size = new System.Drawing.Size(26, 29);
+            this.lblExpectedOriginalSOQ.Size = new System.Drawing.Size(13, 13);
             this.lblExpectedOriginalSOQ.TabIndex = 19;
             this.lblExpectedOriginalSOQ.Text = "0";
             // 
@@ -251,9 +273,10 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(48, 694);
+            this.lblError.Location = new System.Drawing.Point(18, 291);
+            this.lblError.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 36);
+            this.lblError.Size = new System.Drawing.Size(0, 15);
             this.lblError.TabIndex = 20;
             // 
             // lblOkMsg
@@ -261,35 +284,60 @@
             this.lblOkMsg.AutoSize = true;
             this.lblOkMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOkMsg.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblOkMsg.Location = new System.Drawing.Point(48, 694);
+            this.lblOkMsg.Location = new System.Drawing.Point(18, 291);
+            this.lblOkMsg.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblOkMsg.Name = "lblOkMsg";
-            this.lblOkMsg.Size = new System.Drawing.Size(0, 36);
+            this.lblOkMsg.Size = new System.Drawing.Size(0, 15);
             this.lblOkMsg.TabIndex = 21;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(590, 303);
+            this.label10.Location = new System.Drawing.Point(221, 127);
+            this.label10.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(331, 32);
+            this.label10.Size = new System.Drawing.Size(124, 13);
             this.label10.TabIndex = 22;
             this.label10.Text = "Mandatory Container Qty";
             // 
             // chkMandatoryContainerQuantity
             // 
             this.chkMandatoryContainerQuantity.AutoSize = true;
-            this.chkMandatoryContainerQuantity.Location = new System.Drawing.Point(948, 310);
+            this.chkMandatoryContainerQuantity.Location = new System.Drawing.Point(356, 130);
+            this.chkMandatoryContainerQuantity.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.chkMandatoryContainerQuantity.Name = "chkMandatoryContainerQuantity";
-            this.chkMandatoryContainerQuantity.Size = new System.Drawing.Size(34, 33);
+            this.chkMandatoryContainerQuantity.Size = new System.Drawing.Size(15, 14);
             this.chkMandatoryContainerQuantity.TabIndex = 15;
             this.chkMandatoryContainerQuantity.UseVisualStyleBackColor = true;
             this.chkMandatoryContainerQuantity.CheckedChanged += new System.EventHandler(this.chkMandatoryContainerQuantity_CheckedChanged);
             // 
+            // txtProductGroup
+            // 
+            this.txtProductGroup.Location = new System.Drawing.Point(109, 69);
+            this.txtProductGroup.Margin = new System.Windows.Forms.Padding(1);
+            this.txtProductGroup.Name = "txtProductGroup";
+            this.txtProductGroup.Size = new System.Drawing.Size(73, 20);
+            this.txtProductGroup.TabIndex = 24;
+            this.txtProductGroup.Text = "0";
+            this.txtProductGroup.TextChanged += new System.EventHandler(this.txtProductGroup_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(16, 72);
+            this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Product group";
+            // 
             // TesterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 747);
+            this.ClientSize = new System.Drawing.Size(434, 313);
+            this.Controls.Add(this.txtProductGroup);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.chkMandatoryContainerQuantity);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lblOkMsg);
@@ -315,6 +363,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblProductTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "TesterForm";
             this.Text = "Proposal Testing Thingamajig";
             this.ResumeLayout(false);
@@ -348,6 +397,8 @@
         private System.Windows.Forms.Label lblOkMsg;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.CheckBox chkMandatoryContainerQuantity;
+        private System.Windows.Forms.TextBox txtProductGroup;
+        private System.Windows.Forms.Label label11;
     }
 }
 

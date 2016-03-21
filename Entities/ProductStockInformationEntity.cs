@@ -10,6 +10,8 @@ namespace PurchaseProposalTester.Entities
         public int PreparedToOrderQuantity { get; set; }
         public decimal ActiveMailConversion { get; set; }
         public int ContainerQuantity { get; set; }
+        public int ProductGroupId { get; set; }
+        public bool Active { get; set; } = true;
         public int Id { get; set; }
     }
 }

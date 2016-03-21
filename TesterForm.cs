@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -24,8 +25,11 @@ namespace PurchaseProposalTester
         private int _preparedToOrderQuantity;
 
         private int _productId;
+        private int _productGroupId;
         private int _purchaseOrderQuantity;
         private decimal _weeklySalesForecast;
+
+        private int _stockDaysThreshold;
 
         public TesterForm()
         {
@@ -42,6 +46,8 @@ namespace PurchaseProposalTester
                              };
             _productRepository = new RavenRepository<ProductStockInformationEntity>(_documentStore);
             _proposalRepository = new RavenRepository<PurchaseProposalEntity>(_documentStore);
+
+            _stockDaysThreshold = int.Parse(ConfigurationManager.AppSettings["StockDaysThreshold"]);
         }
 
         private void txtProductID_TextChanged(object sender, EventArgs e)
@@ -168,9 +174,9 @@ namespace PurchaseProposalTester
 
         private void RecalculateSoq()
         {
-            const int STOCK_WEEKS_THRESHOLD = 3;
+            const int DAYS_IN_WEEK = 7;
 
-            decimal calculatedSuggestedQuantity = (_weeklySalesForecast * STOCK_WEEKS_THRESHOLD)
+            decimal calculatedSuggestedQuantity = ((_weeklySalesForecast / DAYS_IN_WEEK) * _stockDaysThreshold)
                                                   + _activeMailConversion
                                                   - _availableStock
                                                   - _purchaseOrderQuantity
@@ -209,6 +215,7 @@ namespace PurchaseProposalTester
             var productInformation = new ProductStockInformationEntity
                                      {
                                          Id = _productId,
+                                         ProductGroupId = _productGroupId,
                                          ActiveMailConversion = _activeMailConversion,
                                          AvailableStock = _availableStock,
                                          ContainerQuantity = _containerQuantity,
@@ -226,20 +233,13 @@ namespace PurchaseProposalTester
             foreach(var proposal in oldProposals)
                 _proposalRepository.Delete(proposal.Id);
 
-            DateTime oldestProposalDate;
-            var existingProposals = _proposalRepository.QueryAll(proposal => proposal.Accepted == false).ToList();
-            if(existingProposals.Any())
-                oldestProposalDate = existingProposals.Select(proposal => proposal.CreatedAt).Min();
-            else
-                oldestProposalDate = DateTime.Now;
-
             var newProposal = _proposalRepository.Create(new PurchaseProposalEntity
                                                          {
                                                              ProductId = _productId,
+                                                             ProductGroupId = _productGroupId,
                                                              Accepted = false,
                                                              AcceptedData = null,
-                                                             CreatedAt =
-                                                                 oldestProposalDate.Subtract(new TimeSpan(0, 0, 1)),
+                                                             CreatedAt = DateTime.Now,
                                                              Delivered = false
                                                          });
 
@@ -271,6 +271,18 @@ namespace PurchaseProposalTester
 
 
             return suggestedOrderQuantityRoundedToContainer;
+        }
+
+        private void txtProductGroup_TextChanged(object sender, EventArgs e)
+        {
+            ClearMessages();
+
+            var groupIdValue = txtProductGroup.Text;
+
+            if(!int.TryParse(groupIdValue, out _productGroupId))
+                _productGroupId = 0;
+
+            RecalculateSoq();
         }
     }
 }
