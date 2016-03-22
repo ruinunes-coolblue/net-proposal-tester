@@ -18,22 +18,24 @@ namespace PurchaseProposalTester
         private readonly RavenRepository<ProductStockInformationEntity, int> _productRepository;
         private readonly RavenRepository<PurchaseProposalEntity, int> _proposalRepository;
 
-        private decimal _activeMailConversion;
-        private int _availableStock;
-        private int _containerQuantity;
-        private bool _mandatoryContainerQuantity;
-        private int _preparedToOrderQuantity;
+        private decimal _activeMailConversion = 0;
+        private int _availableStock = 1;
+        private int _containerQuantity = 1;
+        private bool _mandatoryContainerQuantity = false;
+        private int _preparedToOrderQuantity = 2;
 
-        private int _productId;
-        private int _productGroupId;
-        private int _purchaseOrderQuantity;
-        private decimal _weeklySalesForecast;
+        private int _productId = 450958;
+        private int _productGroupId = 5285;
+        private int _purchaseOrderQuantity = 1;
+        private decimal _weeklySalesForecast = 3.85m;
 
-        private int _stockDaysThreshold;
+        private readonly int _stockDaysThreshold;
 
         public TesterForm()
         {
             InitializeComponent();
+            ResetFields();
+
             _documentStore = new DocumentStore
                              {
                                  ConnectionStringName =
@@ -48,6 +50,19 @@ namespace PurchaseProposalTester
             _proposalRepository = new RavenRepository<PurchaseProposalEntity>(_documentStore);
 
             _stockDaysThreshold = int.Parse(ConfigurationManager.AppSettings["StockDaysThreshold"]);
+        }
+
+        private void ResetFields()
+        {
+            txtProductGroup.Text = _productGroupId.ToString();
+            txtActiveMailConversion.Text = _activeMailConversion.ToString(CultureInfo.InvariantCulture);
+            txtContainerQuantity.Text = _containerQuantity.ToString();
+            txtPreparedToOrder.Text = _preparedToOrderQuantity.ToString();
+            txtProductID.Text = _productId.ToString();
+            txtPurchaseOrder.Text = _purchaseOrderQuantity.ToString();
+            txtStock.Text = _availableStock.ToString();
+            txtWeeklySalesForecast.Text = _weeklySalesForecast.ToString(CultureInfo.InvariantCulture);
+            chkMandatoryContainerQuantity.Checked = _mandatoryContainerQuantity;
         }
 
         private void txtProductID_TextChanged(object sender, EventArgs e)
@@ -141,7 +156,7 @@ namespace PurchaseProposalTester
 
             var containerQuantityValue = txtContainerQuantity.Text;
 
-            if(!int.TryParse(containerQuantityValue, out _containerQuantity))
+            if(!int.TryParse(containerQuantityValue, out _containerQuantity) || _containerQuantity < 1)
                 _containerQuantity = 1;
 
             RecalculateSoq();

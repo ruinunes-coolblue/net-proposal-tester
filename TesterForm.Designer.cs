@@ -111,7 +111,7 @@
             // txtProductID
             // 
             this.txtProductID.Location = new System.Drawing.Point(109, 41);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(1);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(73, 20);
             this.txtProductID.TabIndex = 5;
@@ -122,10 +122,10 @@
             // txtStock
             // 
             this.txtStock.Location = new System.Drawing.Point(110, 96);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(1);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(73, 20);
-            this.txtStock.TabIndex = 6;
+            this.txtStock.TabIndex = 7;
             this.txtStock.Text = "0";
             this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
             this.txtStock.Leave += new System.EventHandler(this.txtStock_Leave);
@@ -133,10 +133,10 @@
             // txtPurchaseOrder
             // 
             this.txtPurchaseOrder.Location = new System.Drawing.Point(110, 126);
-            this.txtPurchaseOrder.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtPurchaseOrder.Margin = new System.Windows.Forms.Padding(1);
             this.txtPurchaseOrder.Name = "txtPurchaseOrder";
             this.txtPurchaseOrder.Size = new System.Drawing.Size(73, 20);
-            this.txtPurchaseOrder.TabIndex = 7;
+            this.txtPurchaseOrder.TabIndex = 8;
             this.txtPurchaseOrder.Text = "0";
             this.txtPurchaseOrder.TextChanged += new System.EventHandler(this.txtPurchaseOrder_TextChanged);
             this.txtPurchaseOrder.Leave += new System.EventHandler(this.txtPurchaseOrder_Leave);
@@ -144,10 +144,10 @@
             // txtPreparedToOrder
             // 
             this.txtPreparedToOrder.Location = new System.Drawing.Point(110, 155);
-            this.txtPreparedToOrder.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtPreparedToOrder.Margin = new System.Windows.Forms.Padding(1);
             this.txtPreparedToOrder.Name = "txtPreparedToOrder";
             this.txtPreparedToOrder.Size = new System.Drawing.Size(73, 20);
-            this.txtPreparedToOrder.TabIndex = 8;
+            this.txtPreparedToOrder.TabIndex = 9;
             this.txtPreparedToOrder.Text = "0";
             this.txtPreparedToOrder.TextChanged += new System.EventHandler(this.txtPreparedToOrder_TextChanged);
             this.txtPreparedToOrder.Leave += new System.EventHandler(this.txtPreparedToOrder_Leave);
@@ -185,10 +185,10 @@
             // txtActiveMailConversion
             // 
             this.txtActiveMailConversion.Location = new System.Drawing.Point(356, 44);
-            this.txtActiveMailConversion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtActiveMailConversion.Margin = new System.Windows.Forms.Padding(1);
             this.txtActiveMailConversion.Name = "txtActiveMailConversion";
             this.txtActiveMailConversion.Size = new System.Drawing.Size(69, 20);
-            this.txtActiveMailConversion.TabIndex = 12;
+            this.txtActiveMailConversion.TabIndex = 10;
             this.txtActiveMailConversion.Text = "0";
             this.txtActiveMailConversion.TextChanged += new System.EventHandler(this.txtActiveMailConversion_TextChanged);
             this.txtActiveMailConversion.Leave += new System.EventHandler(this.txtActiveMailConversion_Leave);
@@ -196,10 +196,10 @@
             // txtContainerQuantity
             // 
             this.txtContainerQuantity.Location = new System.Drawing.Point(356, 101);
-            this.txtContainerQuantity.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtContainerQuantity.Margin = new System.Windows.Forms.Padding(1);
             this.txtContainerQuantity.Name = "txtContainerQuantity";
             this.txtContainerQuantity.Size = new System.Drawing.Size(69, 20);
-            this.txtContainerQuantity.TabIndex = 14;
+            this.txtContainerQuantity.TabIndex = 12;
             this.txtContainerQuantity.Text = "1";
             this.txtContainerQuantity.TextChanged += new System.EventHandler(this.txtContainerQuantity_TextChanged);
             this.txtContainerQuantity.Leave += new System.EventHandler(this.txtContainerQuantity_Leave);
@@ -207,10 +207,10 @@
             // txtWeeklySalesForecast
             // 
             this.txtWeeklySalesForecast.Location = new System.Drawing.Point(356, 72);
-            this.txtWeeklySalesForecast.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtWeeklySalesForecast.Margin = new System.Windows.Forms.Padding(1);
             this.txtWeeklySalesForecast.Name = "txtWeeklySalesForecast";
             this.txtWeeklySalesForecast.Size = new System.Drawing.Size(69, 20);
-            this.txtWeeklySalesForecast.TabIndex = 13;
+            this.txtWeeklySalesForecast.TabIndex = 11;
             this.txtWeeklySalesForecast.Text = "0";
             this.txtWeeklySalesForecast.TextChanged += new System.EventHandler(this.txtWeeklySalesForecast_TextChanged);
             this.txtWeeklySalesForecast.Leave += new System.EventHandler(this.txtWeeklySalesForecast_Leave);
@@ -218,10 +218,10 @@
             // btnCreateUpdateProduct
             // 
             this.btnCreateUpdateProduct.Location = new System.Drawing.Point(128, 244);
-            this.btnCreateUpdateProduct.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCreateUpdateProduct.Margin = new System.Windows.Forms.Padding(1);
             this.btnCreateUpdateProduct.Name = "btnCreateUpdateProduct";
             this.btnCreateUpdateProduct.Size = new System.Drawing.Size(208, 25);
-            this.btnCreateUpdateProduct.TabIndex = 15;
+            this.btnCreateUpdateProduct.TabIndex = 14;
             this.btnCreateUpdateProduct.Text = "Create Proposal";
             this.btnCreateUpdateProduct.UseVisualStyleBackColor = true;
             this.btnCreateUpdateProduct.Click += new System.EventHandler(this.btnCreateUpdateProduct_Click);
@@ -304,10 +304,10 @@
             // 
             this.chkMandatoryContainerQuantity.AutoSize = true;
             this.chkMandatoryContainerQuantity.Location = new System.Drawing.Point(356, 130);
-            this.chkMandatoryContainerQuantity.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.chkMandatoryContainerQuantity.Margin = new System.Windows.Forms.Padding(1);
             this.chkMandatoryContainerQuantity.Name = "chkMandatoryContainerQuantity";
             this.chkMandatoryContainerQuantity.Size = new System.Drawing.Size(15, 14);
-            this.chkMandatoryContainerQuantity.TabIndex = 15;
+            this.chkMandatoryContainerQuantity.TabIndex = 13;
             this.chkMandatoryContainerQuantity.UseVisualStyleBackColor = true;
             this.chkMandatoryContainerQuantity.CheckedChanged += new System.EventHandler(this.chkMandatoryContainerQuantity_CheckedChanged);
             // 
@@ -317,7 +317,7 @@
             this.txtProductGroup.Margin = new System.Windows.Forms.Padding(1);
             this.txtProductGroup.Name = "txtProductGroup";
             this.txtProductGroup.Size = new System.Drawing.Size(73, 20);
-            this.txtProductGroup.TabIndex = 24;
+            this.txtProductGroup.TabIndex = 6;
             this.txtProductGroup.Text = "0";
             this.txtProductGroup.TextChanged += new System.EventHandler(this.txtProductGroup_TextChanged);
             // 
@@ -363,7 +363,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblProductTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "TesterForm";
             this.Text = "Proposal Testing Thingamajig";
             this.ResumeLayout(false);
