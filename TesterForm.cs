@@ -302,7 +302,8 @@ namespace PurchaseProposalTester
                                               {
                                                   int.TryParse(p.Trim(), out gid);
                                                   return gid;
-                                              }).ToList();
+                                              })
+                                              .Where(_ => gid > 0).ToList();
 
             RecalculateSoq();
         }
