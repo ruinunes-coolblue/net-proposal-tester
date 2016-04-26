@@ -56,7 +56,7 @@ namespace PurchaseProposalTester
 
         private void ResetFields()
         {
-            txtProductGroup.Text = _productGroupIds.ToString();
+            txtProductGroup.Text = string.Join(",", _productGroupIds);
             txtActiveMailConversion.Text = _activeMailConversion.ToString(CultureInfo.InvariantCulture);
             txtContainerQuantity.Text = _containerQuantity.ToString();
             txtPreparedToOrder.Text = _preparedToOrderQuantity.ToString();
