@@ -1,4 +1,7 @@
-﻿using net_coolblue_datastore_clients.RavenDb;
+﻿using System.Collections.Generic;
+using System.Linq;
+
+using net_coolblue_datastore_clients.RavenDb;
 
 namespace PurchaseProposalTester.Entities
 {
@@ -10,7 +13,7 @@ namespace PurchaseProposalTester.Entities
         public int PreparedToOrderQuantity { get; set; }
         public decimal ActiveMailConversion { get; set; }
         public int ContainerQuantity { get; set; }
-        public int ProductGroupId { get; set; }
+        public IEnumerable<int> ProductGroupIds { get; set; } = Enumerable.Empty<int>();
         public bool Active { get; set; } = true;
         public int Id { get; set; }
     }

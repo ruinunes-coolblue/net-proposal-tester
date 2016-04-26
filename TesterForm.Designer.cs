@@ -327,9 +327,9 @@
             this.label11.Location = new System.Drawing.Point(16, 72);
             this.label11.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 13);
+            this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 23;
-            this.label11.Text = "Product group";
+            this.label11.Text = "Product group(s)";
             // 
             // TesterForm
             // 

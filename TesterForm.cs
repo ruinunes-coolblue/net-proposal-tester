@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.Linq;
@@ -8,6 +9,7 @@ using net_coolblue_datastore_clients.RavenDb;
 
 using PurchaseProposalTester.Entities;
 
+using Raven.Abstractions.Extensions;
 using Raven.Client.Document;
 
 namespace PurchaseProposalTester
@@ -25,7 +27,7 @@ namespace PurchaseProposalTester
         private int _preparedToOrderQuantity = 2;
 
         private int _productId = 450958;
-        private int _productGroupId = 5285;
+        private List<int> _productGroupIds = new List<int>() {5285};
         private int _purchaseOrderQuantity = 1;
         private decimal _weeklySalesForecast = 3.85m;
 
@@ -54,7 +56,7 @@ namespace PurchaseProposalTester
 
         private void ResetFields()
         {
-            txtProductGroup.Text = _productGroupId.ToString();
+            txtProductGroup.Text = _productGroupIds.ToString();
             txtActiveMailConversion.Text = _activeMailConversion.ToString(CultureInfo.InvariantCulture);
             txtContainerQuantity.Text = _containerQuantity.ToString();
             txtPreparedToOrder.Text = _preparedToOrderQuantity.ToString();
@@ -230,7 +232,7 @@ namespace PurchaseProposalTester
             var productInformation = new ProductStockInformationEntity
                                      {
                                          Id = _productId,
-                                         ProductGroupId = _productGroupId,
+                                         ProductGroupIds = _productGroupIds,
                                          ActiveMailConversion = _activeMailConversion,
                                          AvailableStock = _availableStock,
                                          ContainerQuantity = _containerQuantity,
@@ -251,7 +253,7 @@ namespace PurchaseProposalTester
             var newProposal = _proposalRepository.Create(new PurchaseProposalEntity
                                                          {
                                                              ProductId = _productId,
-                                                             ProductGroupId = _productGroupId,
+                                                             ProductGroupIds = _productGroupIds,
                                                              Accepted = false,
                                                              AcceptedData = null,
                                                              CreatedAt = DateTime.Now,
@@ -292,10 +294,16 @@ namespace PurchaseProposalTester
         {
             ClearMessages();
 
-            var groupIdValue = txtProductGroup.Text;
+            int gid = 0;
 
-            if(!int.TryParse(groupIdValue, out _productGroupId))
-                _productGroupId = 0;
+            _productGroupIds = txtProductGroup.Text
+                                              .Split(',')
+                                              .Select(p =>
+                                              {
+                                                  int.TryParse(p.Trim(), out gid);
+                                                  return gid;
+                                              })
+                                              .Where(_ => gid > 0).ToList();
 
             RecalculateSoq();
         }
