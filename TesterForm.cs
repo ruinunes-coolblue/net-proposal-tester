@@ -176,9 +176,9 @@ namespace PurchaseProposalTester
         {
             ClearMessages();
 
-            var weeklySalesForecastValue = txtWeeklySalesForecast.Text;
+            var weeklySalesForecastValue = txtWeeklySalesForecast.Text.Replace(',', '.');
 
-            if(!decimal.TryParse(weeklySalesForecastValue, out _weeklySalesForecast))
+            if(!decimal.TryParse(weeklySalesForecastValue, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out _weeklySalesForecast))
                 _weeklySalesForecast = 0;
 
             RecalculateSoq();
